@@ -1,0 +1,287 @@
+[
+  {
+    "TimeStart": "2021-07-30T11:41:01.8675629+07:00",
+    "TimeEnd": "2021-07-30T11:41:18.5986406+07:00",
+    "Categories": [
+      {
+        "Code": "bátmìtôm",
+        "Source": "../Assets/bat.png",
+        "Name": "Bát mì tôm",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Bát",
+        "Id": "f621696c-a726-4c24-8e94-b05f9b2cdd32"
+      }
+    ],
+    "UserPay": 10238,
+    "Money": 10238,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "23bee200-cf34-4429-b37f-a6dbb47f827e"
+  },
+  {
+    "TimeStart": "2021-07-30T11:48:57.6296955+07:00",
+    "TimeEnd": "2021-07-30T11:49:03.8291815+07:00",
+    "Categories": [
+      {
+        "Code": "bátmìtôm",
+        "Source": "../Assets/bat.png",
+        "Name": "Bát mì tôm",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Bát",
+        "Id": "f621696c-a726-4c24-8e94-b05f9b2cdd32"
+      }
+    ],
+    "UserPay": 10102,
+    "Money": 10102,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "6502cb1c-9adc-46c6-b323-7262f52199c4"
+  },
+  {
+    "TimeStart": "2021-07-30T11:49:10.670879+07:00",
+    "TimeEnd": "2021-07-30T11:49:25.3002975+07:00",
+    "Categories": [
+      {
+        "Code": "bátmìtôm",
+        "Source": "../Assets/bat.png",
+        "Name": "Bát mì tôm",
+        "Price": 10000,
+        "Count": 2,
+        "Unit": "Bát",
+        "Id": "f621696c-a726-4c24-8e94-b05f9b2cdd32"
+      }
+    ],
+    "UserPay": 20442,
+    "Money": 20442,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": "khoong co gi ca",
+    "Id": "be520edd-f509-4a76-9153-6ac09034b8e6"
+  },
+  {
+    "TimeStart": "2021-07-30T11:51:57.625412+07:00",
+    "TimeEnd": "2021-07-30T11:52:05.5196948+07:00",
+    "Categories": [
+      {
+        "Code": "bia",
+        "Source": "../Assets/chai.png",
+        "Name": "Bia",
+        "Price": 11000,
+        "Count": 1,
+        "Unit": "Chai",
+        "Id": "1bcc6487-d0ff-4adf-a0ba-e623b92b2867"
+      }
+    ],
+    "UserPay": 11119,
+    "Money": 11119,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "ed9389fa-48d3-4a15-9c59-942944ea7f8e"
+  },
+  {
+    "TimeStart": "2021-07-30T17:00:10.0327275+07:00",
+    "TimeEnd": "2021-07-30T17:00:36.5609396+07:00",
+    "Categories": [
+      {
+        "Code": "bia",
+        "Source": "../Assets/chai.png",
+        "Name": "Bia",
+        "Price": 11000,
+        "Count": 1,
+        "Unit": "Chai",
+        "Id": "1bcc6487-d0ff-4adf-a0ba-e623b92b2867"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "6c262677-3356-4fc1-a362-013e2ce4945d"
+  },
+  {
+    "TimeStart": "2021-07-30T17:01:09.8920914+07:00",
+    "TimeEnd": "2021-07-30T17:01:14.2640658+07:00",
+    "Categories": [
+      {
+        "Code": "bia",
+        "Source": "../Assets/chai.png",
+        "Name": "Bia",
+        "Price": 11000,
+        "Count": 1,
+        "Unit": "Chai",
+        "Id": "1bcc6487-d0ff-4adf-a0ba-e623b92b2867"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "32ff4dff-a60e-4bb2-910b-198d20de9bd8"
+  },
+  {
+    "TimeStart": "2021-07-30T17:03:59.5805017+07:00",
+    "TimeEnd": "2021-07-30T17:04:29.89186+07:00",
+    "Categories": [
+      {
+        "Code": "bia",
+        "Source": "../Assets/chai.png",
+        "Name": "Bia",
+        "Price": 11000,
+        "Count": 1,
+        "Unit": "Chai",
+        "Id": "1bcc6487-d0ff-4adf-a0ba-e623b92b2867"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": "anh xin loi nhung anh rat tiec",
+    "Id": "fdd5f000-5004-42dd-84fa-50f629dd8c54"
+  },
+  {
+    "TimeStart": "2021-07-30T17:04:05.2504539+07:00",
+    "TimeEnd": "2021-07-30T17:04:40.0186106+07:00",
+    "Categories": [
+      {
+        "Code": "thuốclá",
+        "Source": "../Assets/hop.png",
+        "Name": "Thuốc lá",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Hộp",
+        "Id": "06d8c57a-098d-4800-878b-0a904283a74d"
+      }
+    ],
+    "UserPay": 10000,
+    "Money": 10000,
+    "Table": "BÀN 2",
+    "Discount": 0,
+    "Description": null,
+    "Id": "fac0f075-016a-44d6-9b55-b6bdfb5b9f6c"
+  },
+  {
+    "TimeStart": "2021-07-30T17:04:05.2504539+07:00",
+    "TimeEnd": "2021-07-30T17:05:10.1379775+07:00",
+    "Categories": [
+      {
+        "Code": "thuốclá",
+        "Source": "../Assets/hop.png",
+        "Name": "Thuốc lá",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Hộp",
+        "Id": "06d8c57a-098d-4800-878b-0a904283a74d"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 2",
+    "Discount": 0,
+    "Description": null,
+    "Id": "5f7b302c-8299-40fb-9057-522210bfd49c"
+  },
+  {
+    "TimeStart": "2021-07-30T17:04:05.2504539+07:00",
+    "TimeEnd": "2021-07-30T17:05:31.0071815+07:00",
+    "Categories": [
+      {
+        "Code": "thuốclá",
+        "Source": "../Assets/hop.png",
+        "Name": "Thuốc lá",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Hộp",
+        "Id": "06d8c57a-098d-4800-878b-0a904283a74d"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 2",
+    "Discount": 0,
+    "Description": null,
+    "Id": "b94c0015-8619-4350-85f7-f36311247669"
+  },
+  {
+    "TimeStart": "2021-07-30T17:07:03.3840609+07:00",
+    "TimeEnd": "2021-07-30T17:07:15.5671412+07:00",
+    "Categories": [
+      {
+        "Code": "thuốclá",
+        "Source": "../Assets/hop.png",
+        "Name": "Thuốc lá",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Hộp",
+        "Id": "06d8c57a-098d-4800-878b-0a904283a74d"
+      }
+    ],
+    "UserPay": 10000,
+    "Money": 10000,
+    "Table": "BÀN 3",
+    "Discount": 0,
+    "Description": null,
+    "Id": "8abf92ec-6716-4274-84d4-876adcc2e744"
+  },
+  {
+    "TimeStart": "2021-07-30T17:08:16.0484583+07:00",
+    "TimeEnd": "2021-07-30T17:08:23.446988+07:00",
+    "Categories": [],
+    "UserPay": 0,
+    "Money": 0,
+    "Table": "BÀN 3",
+    "Discount": 0,
+    "Description": null,
+    "Id": "c1dd7345-c5cc-43d9-ab2e-98badd99c673"
+  },
+  {
+    "TimeStart": "2021-07-30T17:08:14.7217858+07:00",
+    "TimeEnd": "2021-07-30T17:08:28.4703668+07:00",
+    "Categories": [],
+    "UserPay": 0,
+    "Money": 0,
+    "Table": "BÀN 2",
+    "Discount": 0,
+    "Description": null,
+    "Id": "94261efa-9888-40dc-a83e-a0be12c1986f"
+  },
+  {
+    "TimeStart": "2021-07-30T17:08:13.7029433+07:00",
+    "TimeEnd": "2021-07-30T17:08:31.7106686+07:00",
+    "Categories": [],
+    "UserPay": 0,
+    "Money": 0,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "3cc5a4b2-5c98-4ca2-82a3-7ebd5dc8b040"
+  },
+  {
+    "TimeStart": "2021-07-30T17:46:02.1289804+07:00",
+    "TimeEnd": "0001-01-01T00:00:00",
+    "Categories": [
+      {
+        "Code": "bia",
+        "Source": "../Assets/chai.png",
+        "Name": "Bia",
+        "Price": 11000,
+        "Count": 1,
+        "Unit": "Chai",
+        "Id": "1bcc6487-d0ff-4adf-a0ba-e623b92b2867"
+      }
+    ],
+    "UserPay": 11000,
+    "Money": 11000,
+    "Table": "BÀN 1",
+    "Discount": 0,
+    "Description": null,
+    "Id": "e4416db4-fb4b-4049-a4b1-a1a67e29b5c1"
+  }
+]

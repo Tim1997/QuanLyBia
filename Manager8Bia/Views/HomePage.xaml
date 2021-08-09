@@ -1,0 +1,413 @@
+﻿<UserControl x:Class="Manager8Bia.Views.HomePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Manager8Bia.Views"
+             
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:model="clr-namespace:Manager8Bia.Models"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="mYellow" Color="{Binding ColorTableOne}" />
+        <SolidColorBrush x:Key="mGreen" Color="{Binding ColorTableTwo}" />
+        <SolidColorBrush x:Key="mRed" Color="{Binding ColorTableThree}" />
+        <SolidColorBrush x:Key="mBlue" Color="#321a92" />
+        <SolidColorBrush x:Key="mOptional" Color="#340051" />
+
+        <Style TargetType="TextBlock" x:Key="mTextBlockStyle">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <BooleanToVisibilityConverter x:Key="BoolToVisConverter" />
+    </UserControl.Resources>
+
+
+    <Grid Background="{StaticResource mBackgroundContent}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <!--#region table-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition MinWidth="10" MaxWidth="20"/>
+                <ColumnDefinition/>
+                <ColumnDefinition MinWidth="10" MaxWidth="20"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card Grid.Column="0" Name="tableone">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tableone,Path=DataContext.TableOpenCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableOne}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tableone,Path=DataContext.TableShowCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableOne}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region name-->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Background="{StaticResource mYellow}" Width="50">
+                            <Image Source="/Assets/table.png" VerticalAlignment="Bottom" Margin="10"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1" Margin="0,5,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Name="tbTableOne" Text="BÀN 1" Typography.Capitals="AllPetiteCaps"
+                                       FontSize="25" Foreground="{StaticResource mYellow}" 
+                                       VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                            <WrapPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ClockOutline" Width="30" Height="30"
+                                                         VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                                         Foreground="{StaticResource mYellow}" />
+                                <TextBlock Grid.Column="1" FontSize="30" Foreground="{StaticResource mYellow}" 
+                                           HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0"
+                                           Text="{Binding TimeTableOne}"/>
+                            </WrapPanel>
+                        </Grid>
+                    </Grid>
+                    <!--#endregion-->
+
+                    <!--#region number-->
+                    <Grid Grid.Row="1">
+                        <TextBlock Grid.Column="1" FontSize="50" Foreground="{StaticResource mYellow}" 
+                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Text="{Binding TableOne.Money}"/>
+                    </Grid>
+                    <!--#endregion-->
+                </Grid>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Column="2" Name="tabletwo">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tabletwo,Path=DataContext.TableOpenCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableTwo}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tabletwo,Path=DataContext.TableShowCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableTwo}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region name-->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Background="{StaticResource mGreen}" Width="50">
+                            <Image Source="/Assets/table.png" VerticalAlignment="Bottom" Margin="10"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1" Margin="0,5,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Name="tbTableTwo" Text="BÀN 2" Typography.Capitals="AllPetiteCaps"
+                                       FontSize="30" Foreground="{StaticResource mGreen}"
+                                       VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                            <WrapPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ClockOutline" Width="30" Height="30"
+                                                         HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{StaticResource mGreen}" />
+                                <TextBlock Grid.Column="1" FontSize="30" Foreground="{StaticResource mGreen}" 
+                                           HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0"
+                                           Text="{Binding TimeTableTwo}"/>
+                            </WrapPanel>
+                        </Grid>
+                    </Grid>
+                    <!--#endregion-->
+
+                    <!--#region number-->
+                    <Grid Grid.Row="1">
+                        <TextBlock Grid.Column="1" FontSize="50" Foreground="{StaticResource mGreen}" 
+                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Text="{Binding TableTwo.Money}"/>
+                    </Grid>
+                    <!--#endregion-->
+                </Grid>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Column="4" Name="tablethree">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tablethree,Path=DataContext.TableOpenCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableThree}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding ElementName=tablethree,Path=DataContext.TableShowCommand}"
+                                               CommandParameter="{Binding Text, ElementName=tbTableThree}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region name-->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Background="{StaticResource mRed}" Width="50">
+                            <Image Source="/Assets/table.png" VerticalAlignment="Bottom" Margin="10"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1" Margin="0,5,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Name="tbTableThree" Text="BÀN 3" Typography.Capitals="AllPetiteCaps"
+                                       FontSize="30" Foreground="{StaticResource mRed}"
+                                       VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                            <WrapPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ClockOutline" Width="30" Height="30"
+                                                         HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{StaticResource mRed}" />
+                                <TextBlock Grid.Column="1" FontSize="30" Foreground="{StaticResource mRed}" 
+                                           HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0"
+                                           Text="{Binding TimeTableThree}"/>
+                            </WrapPanel>
+                        </Grid>
+                    </Grid>
+                    <!--#endregion-->
+
+                    <!--#region number-->
+                    <Grid Grid.Row="1">
+                        <TextBlock Grid.Column="1" FontSize="50" Foreground="{StaticResource mRed}" 
+                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Text="{Binding TableThree.Money}"/>
+                    </Grid>
+                    <!--#endregion-->
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region date time-->
+        <materialDesign:Card Grid.Row="1" Margin="0,20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Background="{StaticResource mBlue}" Width="50" Height="40" VerticalAlignment="Top">
+                    <materialDesign:PackIcon Kind="Calendar" Width="30" Height="30"
+                                             VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+                </Grid>
+
+                <TextBlock Grid.Column="1" Text="Thời gian thực"
+                           FontSize="30" Foreground="{StaticResource mBlue}"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock Grid.Column="2" Text="7/27/2021 5:20:10 PM"
+                           FontSize="30" Foreground="{StaticResource mBlue}"
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </materialDesign:Card>
+        <!--#endregion-->
+
+        <!--#region detail table-->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card Grid.Row="1" Grid.Column="0"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="15"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card Grid.Row="0" Grid.Column="1" Visibility="{Binding Path=IsTableOpen, Converter={StaticResource BoolToVisConverter}}"
+                                 Background="{StaticResource mOptional}">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0*"/>
+                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="155*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Grid.RowSpan="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <ListView Grid.Row="0" ItemsSource="{Binding ListOptionalItem}" HorizontalContentAlignment="Stretch">
+                            <ListView.ItemTemplate>
+                                <DataTemplate DataType="{x:Type model:Category}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="4*"/>
+                                            <ColumnDefinition Width="5*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Grid.Column="0" Width="50" Height="50" Source="{Binding Source}"/>
+                                        <Grid Grid.Column="1" Margin="10,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="7*"/>
+                                                <RowDefinition Height="3*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock Grid.Row="0" Text="{Binding Name}" Foreground="White" FontSize="20"/>
+                                            <TextBlock Grid.Row="1" Foreground="Gray">
+                                                <TextBlock.Text>
+                                                    <MultiBinding StringFormat="{}{0:F1}/{1:F1}">
+                                                        <Binding Path="Price" />
+                                                        <Binding Path="Unit" />
+                                                    </MultiBinding>
+                                                </TextBlock.Text>
+                                            </TextBlock>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Column="2" Margin="50,0,0,0"
+                                               VerticalAlignment="Center" HorizontalAlignment="Right">
+                                            <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="Down" 
+                                                Padding="5" Margin="10,0">
+                                                <materialDesign:PackIcon Kind="Minus" Foreground="White"/>
+                                            </Button>
+                                            <TextBox Text="{Binding Count}" Width="50" VerticalAlignment="Center" 
+                                                 TextAlignment="Center" FontSize="15" Foreground="White"
+                                                 materialDesign:TextFieldAssist.UnderlineBrush="White"
+                                                 PreviewTextInput="MaskNumericInput" 
+                                                 DataObject.Pasting="MaskNumericPaste"/>
+                                            <Button Style="{StaticResource MaterialDesignFlatButton}" ToolTip="Up" 
+                                                Padding="5" Margin="10,0">
+                                                <materialDesign:PackIcon Kind="Plus" Foreground="White"/>
+                                            </Button>
+                                        </WrapPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <Button Grid.Row="1" Style="{StaticResource MaterialDesignIconButton}" 
+                                ToolTip="Thêm" Background="{DynamicResource MaterialDesignSnackbarRipple}"
+                                HorizontalAlignment="Right" Margin="0,0,10,0" Width="40" Height="40"
+                                Command="{Binding AddCommand}" CommandParameter="{Binding Header, ElementName=gbTable}">
+                            <materialDesign:PackIcon Kind="Plus" Foreground="White"/>
+                        </Button>
+                    </Grid>
+
+                    <GroupBox Grid.Column="1" Name="gbTable" Header="{Binding CurrentTable}" Margin="5" Grid.RowSpan="3" >
+                        <StackPanel>
+                            <Grid VerticalAlignment="Center" Margin="5">
+                                <TextBlock HorizontalAlignment="Left" Style="{StaticResource mTextBlockStyle}"
+                                           Text="Tổng tiền:"/>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource mTextBlockStyle}"
+                                           Text="{Binding CurrrentMoney, Mode=TwoWay}"/>
+                            </Grid>
+
+                            <Grid VerticalAlignment="Center" Margin="5">
+                                <TextBlock HorizontalAlignment="Left" Style="{StaticResource mTextBlockStyle}"
+                                           Text="Giảm giá (%):"/>
+                                <TextBox HorizontalAlignment="Right" Width="50" HorizontalContentAlignment="Right"
+                                         Text="{Binding CurrentDiscount}" FontSize="15" Foreground="White"
+                                         PreviewTextInput="MaskNumericInput" DataObject.Pasting="MaskNumericPaste"/>
+                            </Grid>
+
+                            <Separator Margin="10"/>
+
+                            <Grid VerticalAlignment="Center" Margin="5">
+                                <TextBlock HorizontalAlignment="Left" Style="{StaticResource mTextBlockStyle}"
+                                           Text="Khách cần trả:"/>
+                                <TextBlock Name="tbPayment" HorizontalAlignment="Right" Style="{StaticResource mTextBlockStyle}"
+                                           Text="{Binding CurrentUserPay}" Height="20" VerticalAlignment="Bottom"/>
+                            </Grid>
+
+                            <Grid VerticalAlignment="Center" Margin="5">
+                                <TextBlock HorizontalAlignment="Left" Style="{StaticResource mTextBlockStyle}"
+                                           Text="Khách thanh toán:"/>
+                                <TextBox HorizontalAlignment="Right" Width="100" HorizontalContentAlignment="Right"
+                                         Text="{Binding Text, ElementName=tbPayment}" FontSize="15" Foreground="White" 
+                                         PreviewTextInput="MaskNumericInput" DataObject.Pasting="MaskNumericPaste"/>
+                            </Grid>
+
+                            <Separator Margin="10"/>
+
+                            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="10,0"
+                                     VerticalAlignment="Top" Height="100" AcceptsReturn="True" TextWrapping="Wrap" 
+                                     VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Ghi Chú"
+                                     Foreground="White" materialDesign:ColorZoneAssist.Mode="Dark"
+                                     Text="{Binding CurrentDescription}"/>
+
+                            <Grid VerticalAlignment="Center" Margin="5">
+                                <TextBlock HorizontalAlignment="Left" Style="{StaticResource mTextBlockStyle}"
+                                           Text="Tiền thừa trả khách:"/>
+                                <TextBlock HorizontalAlignment="Right" Style="{StaticResource mTextBlockStyle}"
+                                           Text="0"/>
+                            </Grid>
+
+                            <Button Content="Thanh toán" Margin="10,10" Command="{Binding OrderCommand}"
+                                    CommandParameter="{Binding Header, ElementName=gbTable}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region dialog-->
+        <Grid Grid.Row="2">
+            <materialDesign:DialogHost Identifier="RootDialog"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center" >
+            </materialDesign:DialogHost>
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</UserControl>

@@ -1,0 +1,32 @@
+[
+  {
+    "TimeStart": "2021-07-29T20:09:08.6123285+07:00",
+    "TimeEnd": "2021-07-29T20:09:21.760876+07:00",
+    "Table": "Bàn 1",
+    "Description": "trả đủ",
+    "Categories": [
+      {
+        "Code": "bátmìtôm",
+        "Source": "../Assets/bat.png",
+        "Name": "Bát mì tôm",
+        "Price": 10000,
+        "Count": 2,
+        "Unit": "Bát",
+        "Id": "f621696c-a726-4c24-8e94-b05f9b2cdd32"
+      },
+      {
+        "Code": "thuốclá",
+        "Source": "../Assets/hop.png",
+        "Name": "Thuốc lá",
+        "Price": 10000,
+        "Count": 1,
+        "Unit": "Hộp",
+        "Id": "06d8c57a-098d-4800-878b-0a904283a74d"
+      }
+    ],
+    "Discount": 0,
+    "UserPay": 30204.0,
+    "Money": 30204,
+    "Id": "f8328d14-38da-4ff8-9dc8-abcf9e79663c"
+  }
+]
